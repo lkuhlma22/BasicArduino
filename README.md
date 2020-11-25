@@ -70,7 +70,7 @@ void loop() {
 ```
 
 ### Evidence
-[Here is my link to arduino] (https://create.arduino.cc/editor/lkuhlma22/163be499-bd49-4efe-bfe1-71275229e557)
+[Here is my link to arduino](https://create.arduino.cc/editor/lkuhlma22/163be499-bd49-4efe-bfe1-71275229e557)
 
 ### Image or Wiring
 
