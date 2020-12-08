@@ -75,4 +75,4 @@ void loop() {
 ### Image or Wiring
 
 ### Reflection
-It was pretty easy once I understood the conditions.  A condition is basically just an if then statement.
+It was pretty easy once I understood the conditions.  A condition is basically just an if then statement in code language.  Its still hard for me to know where to put certain commands.
