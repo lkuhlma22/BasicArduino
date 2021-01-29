@@ -128,3 +128,50 @@ buttonState=digitalRead(buttonPin);
 
 ### Reflection
 This assignment was very difficult to me because I do not really know how to code very well.  I kind of understand the concept but i dont understand all the little rules and how nothing works just because of one capitilization error.  The wiring was also very tricky for me to figure out but with help I did.
+
+### 2 Button Servo
+
+### Description and code
+The goal of the assignment is to make a servo go clockwise 90 degrees when one button is pushed and go counter clockwise 90 degrees when another button is pushed.  Unfortunently I did not have enough wires in my kit and I had no transportation to chs to get more so I did it with one button.
+
+/*
+  
+*/
+#include <Servo.h>
+int buttonState = 0;
+int buttonPin = 7;
+int delayVar = 1000;
+
+Servo myServo;
+
+void setup() {
+
+  // initialize digital pin 13 as an output.
+  pinMode(buttonPin, INPUT);
+
+  Serial.begin(9600); // This turns on my Serial Monitor
+
+ //initializing my servo on pin 9 
+  myServo.attach(9);
+  
+}
+
+void loop() {
+buttonState=digitalRead(buttonPin);
+  Serial.print("button State: ");
+  Serial.print(buttonState);
+
+  if (buttonState == HIGH) {
+    myServo.write(180);
+  }
+  else
+  {
+   myServo.write(90);
+  }
+}
+
+### Evidence
+[My code in Arduino](https://create.arduino.cc/editor/lkuhlma22/d7d652f1-dd47-442d-bcd8-caf9c6bf5d56)
+
+### Reflection
+This one was also very difficult for me because I did not have the right wires and I still dont really understand arduino very well.  It is like trying to learn a new language that has a bunch of rules and if one little thing is wrong none of it makes sense.
