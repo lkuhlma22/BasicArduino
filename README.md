@@ -76,3 +76,55 @@ void loop() {
 
 ### Reflection
 It was pretty easy once I understood the conditions.  A condition is basically just an if then statement in code language.  Its still hard for me to know where to put certain commands.
+
+### One button one LED
+
+### Description and code
+The goal of the assignment is to make the LED start blinking when the button is pressed and turn off when the button is released.  
+// Button-based Variable LED Blink
+  // When I press the button, the LED will blink, then blink faster and faster.
+  // Letting go of the button stops the blinking and resets the blink speed to 1 second
+
+  // the setup function runs once when you press reset or power the board
+*/
+int LED = 13;
+int buttonState = 0;
+int buttonPin = 7;
+int delayVar = 1000;
+
+void setup() {
+
+  // initialize digital pin 13 as an output.
+  pinMode(LED, OUTPUT);
+  pinMode(buttonPin, INPUT);
+
+  Serial.begin(9600); // This turns on my Serial Monitor
+}
+
+void loop() {
+buttonState=digitalRead(buttonPin);
+
+  Serial.print("button State: ");
+  Serial.print(buttonState);
+
+  if (buttonState == HIGH) {
+    digitalWrite(LED, HIGH);           // turn the LED on (HIGH is the voltage level)
+    delay(delayVar);                       // wait for a second
+    digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
+    delay(delayVar);                       // wait for a second
+    Serial.print("\t delayVar:");
+    Serial.println(delayVar);
+  }
+  else
+  {
+    digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
+    Serial.println("\t no blink!");
+
+  }
+}
+
+### Evidence
+[Here is my code on Arduino Create](https://create.arduino.cc/editor/lkuhlma22/83988797-7935-4019-b121-39519c29f56f)
+
+### Reflection
+This assignment was very difficult to me because I do not really know how to code very well.  I kind of understand the concept but i dont understand all the little rules and how nothing works just because of one capitilization error.  The wiring was also very tricky for me to figure out but with help I did.
