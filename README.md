@@ -81,6 +81,7 @@ It was pretty easy once I understood the conditions.  A condition is basically j
 
 ### Description and code
 The goal of the assignment is to make the LED start blinking when the button is pressed and turn off when the button is released.  
+
 // Button-based Variable LED Blink
   // When I press the button, the LED will blink, then blink faster and faster.
   // Letting go of the button stops the blinking and resets the blink speed to 1 second
